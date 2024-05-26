@@ -91,6 +91,7 @@ class Footer extends StatelessWidget {
             color: AppColors.primary,
           )),
       child: Column(
+        mainAxisSize: MainAxisSize.min,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           SvgPicture.asset(
