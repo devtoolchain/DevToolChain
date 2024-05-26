@@ -133,9 +133,9 @@ class _DesktopHomeState extends State<DesktopHome> {
   Widget _buildCard(BuildContext context,
       {required String title, required String subtitle}) {
     return Container(
-      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
-      width: context.width / 4.5,
-      height: context.width / 4.5,
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+      width: 300,
+      height: 300,
       decoration: BoxDecoration(
           color: AppColors.card,
           boxShadow: [
