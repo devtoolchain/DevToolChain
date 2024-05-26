@@ -1,0 +1,36 @@
+class AppIcons {
+  static const androidIconSvg = "assets/images/android_icon.svg";
+  static const androidSvg = "assets/images/android.svg";
+  static const awsSvg = "assets/images/aws.svg";
+  static const azureIconSvg = "assets/images/azure_icon.svg";
+  static const bloggerSvg = "assets/images/blogger.svg";
+  static const dartSvg = "assets/images/dart.svg";
+  static const djangoIconSvg = "assets/images/django_icon.svg";
+  static const djangoSvg = "assets/images/django.svg";
+  static const dockerSvg = "assets/images/docker.svg";
+  static const facebookSvg = "assets/images/facebook.svg";
+  static const fastlaneSvg = "assets/images/fastlane.svg";
+  static const flutterSvg = "assets/images/flutter.svg";
+  static const gitSvg = "assets/images/git.svg";
+  static const githubSvg = "assets/images/github.svg";
+  static const gitlabSvg = "assets/images/gitlab.svg";
+  static const htmlSvg = "assets/images/html.svg";
+  static const instagramSvg = "assets/images/instagram.svg";
+  static const javascriptSvg = "assets/images/javascript.svg";
+  static const kotlinSvg = "assets/images/kotlin.svg";
+  static const linkedinSvg = "assets/images/linkedin.svg";
+  static const macosSvg = "assets/images/macos.svg";
+  static const nodejsSvg = "assets/images/nodejs.svg";
+  static const googleSvg = "assets/images/google.svg";
+  static const pythonSvg = "assets/images/python.svg";
+  static const googlePlaySvg = "assets/images/google_play.svg";
+  static const googlePlayIconSvg = "assets/images/google_play_icon.svg";
+  static const stripeSvg = "assets/images/stripe.svg";
+  static const youtubeSvg = "assets/images/youtube.svg";
+  static const dockerIconSvg = "assets/images/docker_icon.svg";
+  static const youtubeIconSvg = "assets/images/youtube_icon.svg";
+  static const githubIconSvg = "assets/images/github_icon.svg";
+  static const googleIconSvg = "assets/images/google_icon.svg";
+  static const instagramIconSvg = "assets/images/instagram_icon.svg";
+  static const linkedinIconSvg = "assets/images/linkedin_icon.svg";
+}
