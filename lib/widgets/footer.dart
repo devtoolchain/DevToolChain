@@ -46,7 +46,7 @@ class Footer extends StatelessWidget {
       icon: Icon(
         icon,
         fill: 0.1,
-        size: 35,
+        size: 30,
       ),
       color: Colors.white,
       padding: const EdgeInsets.all(12),
@@ -80,8 +80,9 @@ class Footer extends StatelessWidget {
 
   Widget _buildFooter(BuildContext context) {
     return Container(
+      padding: EdgeInsets.symmetric(vertical: 20),
       margin: EdgeInsets.zero,
-      height: context.height * 0.6,
+      // height: context.height * 0.6,
       width: context.width,
       decoration: BoxDecoration(
           color: AppColors.primary,
@@ -96,7 +97,7 @@ class Footer extends StatelessWidget {
             devtoolchainText,
             style: TextStyle(
                 color: AppColors.white,
-                fontSize: 40,
+                fontSize: 35,
                 fontFamily: FontFamily.nunito,
                 fontWeight: FontWeight.w800),
           ),
@@ -104,7 +105,7 @@ class Footer extends StatelessWidget {
             devtoolchainSloganText,
             style: TextStyle(
                 color: AppColors.white,
-                fontSize: 30,
+                fontSize: 25,
                 fontFamily: FontFamily.nunito,
                 fontWeight: FontWeight.w600),
           ),
@@ -117,7 +118,7 @@ class Footer extends StatelessWidget {
               devtoolchainDescText,
               style: TextStyle(
                   color: AppColors.card,
-                  fontSize: 22,
+                  fontSize: 18,
                   fontFamily: FontFamily.nunito,
                   fontWeight: FontWeight.w600),
               textAlign: TextAlign.center,

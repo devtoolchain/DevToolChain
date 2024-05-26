@@ -49,7 +49,7 @@ class _DesktopHomeState extends State<DesktopHome> {
                 style: TextStyle(
                     fontFamily: FontFamily.nunito,
                     color: AppColors.subtitle,
-                    fontSize: 25,
+                    fontSize: 20,
                     fontWeight: FontWeight.w600),
                 textAlign: TextAlign.center,
               ),
@@ -123,17 +123,19 @@ class _DesktopHomeState extends State<DesktopHome> {
           Expanded(
               child: SvgPicture.asset(
             AppImages.svg_1,
-            height: context.height * 0.7,
+            height: context.height * 0.9,
           )),
         ],
       ),
     );
   }
 
-  Widget _buildCard(BuildContext context) {
+  Widget _buildCard(BuildContext context,
+      {required String title, required String subtitle}) {
     return Container(
-      width: context.width / 4,
-      height: context.width / 4,
+      padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 30),
+      width: context.width / 4.5,
+      height: context.width / 4.5,
       decoration: BoxDecoration(
           color: AppColors.card,
           boxShadow: [
@@ -142,7 +144,28 @@ class _DesktopHomeState extends State<DesktopHome> {
                 blurRadius: 20,
                 spreadRadius: 2),
           ],
-          borderRadius: BorderRadius.circular(5)),
+          borderRadius: BorderRadius.circular(10)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          Text(
+            title.toUpperCase(),
+            style: const TextStyle(
+                fontSize: 20,
+                fontFamily: FontFamily.nunito,
+                fontWeight: FontWeight.w600),
+          ),
+          Text(
+            subtitle,
+            textAlign: TextAlign.center,
+            style: const TextStyle(
+                fontFamily: FontFamily.nunito,
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: AppColors.subtitle),
+          )
+        ],
+      ),
     );
   }
 
@@ -168,32 +191,20 @@ class _DesktopHomeState extends State<DesktopHome> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(
-                    3,
-                    (index) => _buildCard(context),
-                  )
-                  //  [
-                  //   Container(
-                  //     width: context.width / 4,
-                  //     height: context.width / 4,
-                  //     decoration: BoxDecoration(
-                  //         color: AppColors.card,
-                  //         boxShadow: [
-                  //           BoxShadow(
-                  //               color: AppColors.subtitle.withOpacity(0.6),
-                  //               blurRadius: 20,
-                  //               spreadRadius: 2),
-                  //         ],
-                  //         borderRadius: BorderRadius.circular(5)),
-                  //   ),
-                  // ],
-                  ),
+              Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                _buildCard(context,
+                    title: frontendText, subtitle: frontendDescText),
+                hSpace(40),
+                _buildCard(context,
+                    title: backendText, subtitle: backendDescText),
+                hSpace(40),
+                _buildCard(context,
+                    title: cloudOpsText, subtitle: cloudOpsDescText)
+              ]),
               const Text(
                 "OUR EXPERTISE",
                 style: TextStyle(
-                    fontSize: 30,
+                    fontSize: 28,
                     color: AppColors.title,
                     fontFamily: FontFamily.nunito,
                     fontWeight: FontWeight.w600),
@@ -206,7 +217,7 @@ class _DesktopHomeState extends State<DesktopHome> {
                     itemCount: _iconList.length,
                     itemBuilder: (context, index) => SvgPicture.asset(
                       _iconList[index],
-                      height: context.height * 0.14,
+                      height: context.height * 0.12,
                     ),
                   ))
             ],

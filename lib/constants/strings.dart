@@ -13,6 +13,16 @@ const String ourExpertiseText = "Our Expertise";
 const String skillsText = "Skills";
 const String copyrigntText = "Copyright © 2024. Designed by ";
 
+const String frontendText = "Frontend";
+const String frontendDescText =
+    "We bring your frontend visions to life. Whether it's sleek web designs with HTML, CSS, Javascript and Node.js or dynamic user experiences, we've got you covered. Let's create something amazing together!";
+const String backendText = "Backend";
+const String backendDescText =
+    "We specialize in robust backend solutions. From powerful APIs with Flask and Django to efficient databases and server management, we ensure your projects run seamlessly. Let's build something exceptional together!";
+const String cloudOpsText = "Cloud OPS";
+const String cloudOpsDescText =
+    "We excel in cloud operations. Whether it's deploying on AWS, managing Azure services, or optimizing cloud infrastructure, we ensure smooth and efficient operations. Let's elevate your cloud solutions together!";
+
 const String homeText = "Home";
 const String aboutUsText = "About Us";
 const String servicesText = "Services";
