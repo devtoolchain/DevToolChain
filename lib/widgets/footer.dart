@@ -31,14 +31,18 @@ class Footer extends StatelessWidget {
   }
 
   Widget socialIcon(BuildContext context,
-      {required IconData icon, Color? hoverColor}) {
+      {required IconData icon, Color? hoverColor, String? url}) {
     return IconButton.outlined(
       style: const ButtonStyle(
         side: WidgetStatePropertyAll(
           BorderSide(color: Colors.white),
         ),
       ),
-      onPressed: () {},
+      onPressed: () {
+        if (url != null) {
+          launchUrlString(url);
+        }
+      },
       icon: Icon(
         icon,
         fill: 0.1,
@@ -58,7 +62,9 @@ class Footer extends StatelessWidget {
             icon: Ionicons.logo_facebook, hoverColor: const Color(0xff0766ff)),
         hSpace(15),
         socialIcon(context,
-            icon: Ionicons.logo_instagram, hoverColor: const Color(0xffff007e)),
+            icon: Ionicons.logo_instagram,
+            hoverColor: const Color(0xffff007e),
+            url: "https://instagram.com/devtoolchain"),
         hSpace(15),
         socialIcon(context,
             icon: Ionicons.logo_youtube, hoverColor: const Color(0xffff0000)),
