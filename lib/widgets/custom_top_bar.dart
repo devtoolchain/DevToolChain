@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:devtoolchain/constants/constants.dart';
 import 'package:devtoolchain/utils/screen_size.dart';
 import 'package:devtoolchain/widgets/widgets.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class CustomTopBar extends StatelessWidget {
   final int navIndex;
@@ -28,31 +29,37 @@ class CustomTopBar extends StatelessWidget {
               child: InkWell(
                 onTap: () {},
                 child: Container(
-                  child: Column(
-                    mainAxisSize: MainAxisSize.min,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        devtoolchainText.toUpperCase(),
-                        style: TextStyle(
-                            fontSize: 36,
-                            fontFamily: FontFamily.nunito,
-                            color: AppColors.title,
-                            fontWeight: FontWeight.w600,
-                            height: 0,
-                            letterSpacing: 2.0),
-                      ),
-                      Text(
-                        devtoolchainSloganText,
-                        style: TextStyle(
-                            height: 0,
-                            
-                            fontFamily: FontFamily.nunito,
-                            fontWeight: FontWeight.w600),
-                      )
-                    ],
-                  ),
-                ),
+                    child: SvgPicture.asset(
+                  "assets/images/logo.svg",
+                  fit: BoxFit.fitHeight,
+                  width: 200,
+                )
+
+                    // Column(
+                    //   mainAxisSize: MainAxisSize.min,
+                    //   mainAxisAlignment: MainAxisAlignment.center,
+                    //   children: [
+                    //     Text(
+                    //       devtoolchainText.toUpperCase(),
+                    //       style: TextStyle(
+                    //           fontSize: 36,
+                    //           fontFamily: FontFamily.nunito,
+                    //           color: AppColors.title,
+                    //           fontWeight: FontWeight.w600,
+                    //           height: 0,
+                    //           letterSpacing: 2.0),
+                    //     ),
+                    //     Text(
+                    //       devtoolchainSloganText,
+                    //       style: TextStyle(
+                    //           height: 0,
+
+                    //           fontFamily: FontFamily.nunito,
+                    //           fontWeight: FontWeight.w600),
+                    //     )
+                    //   ],
+                    // ),
+                    ),
               )),
           hSpace(20),
           Expanded(

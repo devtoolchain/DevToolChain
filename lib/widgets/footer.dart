@@ -93,21 +93,10 @@ class Footer extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            devtoolchainText,
-            style: TextStyle(
-                color: AppColors.white,
-                fontSize: 35,
-                fontFamily: FontFamily.nunito,
-                fontWeight: FontWeight.w800),
-          ),
-          const Text(
-            devtoolchainSloganText,
-            style: TextStyle(
-                color: AppColors.white,
-                fontSize: 25,
-                fontFamily: FontFamily.nunito,
-                fontWeight: FontWeight.w600),
+          SvgPicture.asset(
+            AppImages.logoWhiteSvg,
+            width: 550,
+            fit: BoxFit.fitHeight,
           ),
           vSpace(15),
           _buildSocialIcons(context),
